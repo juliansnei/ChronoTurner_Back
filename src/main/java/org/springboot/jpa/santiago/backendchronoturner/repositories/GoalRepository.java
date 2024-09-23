@@ -13,6 +13,6 @@ public interface GoalRepository extends JpaRepository<Goal, String> {
     //Asignadores de atributos de GoalRepository (setters)
     //Lectores de atributos de GoalRepository (getters)
         //Métodos de GoalRepository
-    @Query("select g from Goal g where g.name like %?%")
+    //@Query("select g from Goal g where g.name like %?%")
     public List<Goal> findByNameContaining(String name);
 }
