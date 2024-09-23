@@ -36,10 +36,10 @@ public class JWFFilter extends OncePerRequestFilter {
             @NonNull FilterChain filterChain
     ) throws ServletException, IOException {
 
-        if(request.getServletPath().contains("/auth")){
-            filterChain.doFilter(request, response);
-            return;
-        }
+//        if(request.getServletPath().contains("/auth")){
+//            filterChain.doFilter(request, response);
+//            return;
+//        }
 
         final String authHeader = request.getHeader(AUTHORIZATION);
         final String jswt;
